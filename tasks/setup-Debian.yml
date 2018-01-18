@@ -1,0 +1,29 @@
+---
+- name: Sysctl
+  sysctl:
+    name: "{{ item.name }}"
+    value: "{{ item.value }}"
+    state: present
+  with_items:
+    - {name: net.bridge.bridge-nf-call-iptables, value: 1}
+
+- name: Add kuebeadm apt key
+  apt_key:
+    url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+    state: present
+
+- name: Add kubeadm apt repo
+  apt_repository:
+    repo: deb http://apt.kubernetes.io/ kubernetes-xenial main
+    state: present
+    filename: 'kubernetes'
+
+- name: Install kubeadm
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+  with_items:
+    - kubelet
+    - kubeadm
+    - kubectl
+    - kubernetes-cni

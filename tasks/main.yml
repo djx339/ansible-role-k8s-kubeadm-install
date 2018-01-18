@@ -1,2 +1,2 @@
 ---
-# tasks file for k8s-kubeadm-install
+- include_tasks: "setup-{{ ansible_os_family }}.yml"
