@@ -11,7 +11,7 @@ None.
 Role Variables
 --------------
 
-None.
+`k8s_repo_url`: The kubernetes repo url. (Default: http://apt.kubernetes.io/)
 
 Dependencies
 ------------
