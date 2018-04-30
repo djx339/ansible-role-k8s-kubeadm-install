@@ -10,14 +10,14 @@ env:
     distribution_version: xenial
     init: /lib/systemd/systemd
     run_opts: "--privileged --volume=/sys/fs/cgroup:/sys/fs/cgroup:ro"
-  - distribution: Ubuntu
-    distribution_version: trusty
-    init: /sbin/init
-    run_opts: ""
-  - distribution: Ubuntu
-    distribution_version: precise
-    init: /sbin/init
-    run_opts: ""
+#  - distribution: Ubuntu
+#    distribution_version: trusty
+#    init: /sbin/init
+#    run_opts: ""
+#  - distribution: Ubuntu
+#    distribution_version: precise
+#    init: /sbin/init
+#    run_opts: ""
 #  - distribution: EL
 #    distribution_version: "7"
 #    init: /usr/lib/systemd/systemd
