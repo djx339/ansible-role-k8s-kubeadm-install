@@ -1,7 +1,4 @@
 ---
-- name: Include variables
-  include_vars: "{{ ansible_os_family }}.yml"
-
 - name: Sysctl
   sysctl:
     name: "{{ item.name }}"
@@ -17,7 +14,7 @@
 
 - name: Add kubeadm apt repo
   apt_repository:
-    repo: "deb {{ k8s_repo_url }} kubernetes-xenial main"
+    repo: "deb {{ k8s_apt_repo_url }} kubernetes-xenial main"
     state: present
     filename: 'kubernetes'
 

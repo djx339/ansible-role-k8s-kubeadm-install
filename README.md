@@ -11,7 +11,7 @@ None.
 Role Variables
 --------------
 
-`k8s_repo_url`: The kubernetes repo url. (Default: http://apt.kubernetes.io/)
+`k8s_apt_repo_url`: The kubernetes repo url for Debian based Linux system. (Default: http://apt.kubernetes.io/)
 
 Dependencies
 ------------

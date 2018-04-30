@@ -1,2 +1,2 @@
 ---
-# defaults file for k8s-kubeadm-install
+k8s_apt_repo_url: http://apt.kubernetes.io/
